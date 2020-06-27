@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Game of Life</title>
+</head>
+
+<body>
+    <div>
+        <h1>Conway's Game of Life</h1>
+        <p>Written in 1.5 hours. Click to toggle tiles 'on/off'. Use the controls at the bottom to start the simulation. For more information consult: <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's_Game_of_Life</a></p>
+    </div>
+
+    <canvas id="mainCanvas" style="float:bottom;margin:10px" width="100" height="100"></canvas>
+
+    <div style="padding:10px">
+        <div>
+            <input type="button" id="pauseButton" onclick="onPauseButtonClicked()" value="Unpause" />
+            <input type="button" id="resetButton" onclick="onResetButtonClicked()" value="Reset" />
+        </div>
+        <div>
+            FPS (Frames per second):
+            <input type="range" id="fpsRange" value="8" min="1.0" max="30" onchange="onFPSChanged(true)" />
+            <input type="number" id="fpsNumber" value="8" min="1.0" max="30" onchange="onFPSChanged(false)" </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
